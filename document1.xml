@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"><w:body><w:p><w:pPr><w:pStyle w:val="title"/><w:jc w:val="left"/></w:pPr><w:r><w:t>Conic Sections</w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="text"/><w:jc w:val="left"/></w:pPr><w:r><w:t>Here we will discuss some conic sections. A conic section is the intersection of a plane and a cone. By changing the angle of intersection, we can produce a circle, an ellipse, a parabola or byperbola. In the special case when the plane touches the vertex, we can get a point, a line or 2 intersecting lines, a parabola, 2 parallel lines, 1 line or no curve.</w:t></w:r></w:p><w:p><w:pPr><w:sectPr/></w:pPr></w:p><w:p><w:pPr><w:pStyle w:val="heading"/><w:jc w:val="left"/></w:pPr><w:r><w:t>Circle</w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="text"/><w:jc w:val="left"/></w:pPr><w:r><w:t>A circle is the set of all points M in a place such that all points in M are equidistant to a fixed point C, the center. The distance between C and all points in M is called the radius.</w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="text"/><w:jc w:val="left"/></w:pPr><w:r><w:t>A circle of radius r is given by the following equation </w:t></w:r><w:customXml w:element="equation"><w:customXmlPr><w:attr w:name="displayStyle" w:val="false"/></w:customXmlPr><w:r><w:t>x = rcos(\theta); y=rsin(\theta)</w:t></w:r></w:customXml></w:p><w:p><w:pPr><w:pStyle w:val="code"/></w:pPr><w:r><w:t><![CDATA[figure;
+hold off;
+n = 100;
+theta = linspace(0,2*pi,n);
+r = 3; % radius
+x = r*cos(theta);
+y = r*sin(theta);
+plot(x,y,'g-');
+hold on;
+plot(0,0,'k*');
+axis equal;
+title(sprintf("Circle of radius %d", r));]]></w:t></w:r></w:p><w:p><w:pPr><w:sectPr/></w:pPr></w:p><w:p><w:pPr><w:pStyle w:val="heading"/><w:jc w:val="left"/></w:pPr><w:r><w:t>Parabola</w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="text"/><w:jc w:val="left"/></w:pPr><w:r><w:t>A parabola is the set of all points M in a plane such that the distance of M to a fixed point F, the</w:t></w:r><w:r><w:rPr><w:b/></w:rPr><w:t> </w:t></w:r><w:r><w:rPr><w:b/><w:u/></w:rPr><w:t>focus</w:t></w:r><w:r><w:t>, is equal to the distance from M to a fixed line, the </w:t></w:r><w:r><w:rPr><w:b/></w:rPr><w:t>directrix</w:t></w:r><w:r><w:t>. The line perpendicular to the directrix and passing through the focus of the parabola is called the axis of symmetry. </w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="text"/><w:jc w:val="left"/></w:pPr><w:r><w:t>This basic parabola is defined by the equation </w:t></w:r><w:customXml w:element="equation"><w:customXmlPr><w:attr w:name="displayStyle" w:val="false"/></w:customXmlPr><w:r><w:t>y^2 =  4ax</w:t></w:r></w:customXml><w:r><w:t> where </w:t></w:r><w:customXml w:element="equation"><w:customXmlPr><w:attr w:name="displayStyle" w:val="false"/></w:customXmlPr><w:r><w:t>(a,0)</w:t></w:r></w:customXml><w:r><w:t> defines the focus of the parabola, and the directrix as the line </w:t></w:r><w:customXml w:element="equation"><w:customXmlPr><w:attr w:name="displayStyle" w:val="false"/></w:customXmlPr><w:r><w:t>x = -a</w:t></w:r></w:customXml><w:r><w:t>. A parabola with the focus at the origin and the directrix parallel to the y-axis can be representated as </w:t></w:r><w:customXml w:element="equation"><w:customXmlPr><w:attr w:name="displayStyle" w:val="false"/></w:customXmlPr><w:r><w:t>r(1 + cos(\theta)) =  l</w:t></w:r></w:customXml><w:r><w:t>, where </w:t></w:r><w:customXml w:element="equation"><w:customXmlPr><w:attr w:name="displayStyle" w:val="false"/></w:customXmlPr><w:r><w:t>l</w:t></w:r></w:customXml><w:r><w:t> is the distance from the focus to the parabola itself, measured along a line perpendicular to the axis of symmetry.</w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="code"/></w:pPr><w:r><w:t><![CDATA[figure;
+hold off;
+x = linspace(0,10,n); % Input vector
+a = 1; % Parabola parameter
+y = sqrt(4*a*x); % Equation of the parabola
+plot(x,y,'r-',x,-y,'r-');
+hold on;
+plot(a,0,'k*');
+xlim([-1 10]);
+ylim([-8 8]);
+str = sprintf('Parabola with focus at (%f, 0) and the directrix as the line x = %f', a, -a);
+title(str);]]></w:t></w:r></w:p><w:p><w:pPr><w:sectPr/></w:pPr></w:p><w:p><w:pPr><w:pStyle w:val="heading"/><w:jc w:val="left"/></w:pPr><w:r><w:t>Ellipse</w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="text"/><w:jc w:val="left"/></w:pPr><w:r><w:t>Analytically, an ellipse can also be defined as the set of points such that the ratio of the distance of each point on the curve from a given point, called the </w:t></w:r><w:r><w:rPr><w:b/></w:rPr><w:t>focus</w:t></w:r><w:r><w:t>, to the distance from that same point on the curve to a line, called the </w:t></w:r><w:r><w:rPr><w:b/></w:rPr><w:t>directrix</w:t></w:r><w:r><w:t>, is a constant, called the </w:t></w:r><w:r><w:rPr><w:b/></w:rPr><w:t>eccentricity</w:t></w:r><w:r><w:t>.</w:t></w:r><w:r><w:t> </w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="text"/><w:jc w:val="left"/></w:pPr><w:r><w:t>Ellipses have two mutually perpendicular axes about which the ellipse is symmetric. These axes intersect at the center of the ellipse. The larger of the two axes is called </w:t></w:r><w:r><w:rPr><w:b/></w:rPr><w:t>major axis</w:t></w:r><w:r><w:t> while the smaller is called </w:t></w:r><w:r><w:rPr><w:b/></w:rPr><w:t>minor axis</w:t></w:r><w:r><w:t>. The equation of an ellipse whose major and minor axes coincide with the Cartesian axes is </w:t></w:r><w:customXml w:element="equation"><w:customXmlPr><w:attr w:name="displayStyle" w:val="false"/></w:customXmlPr><w:r><w:t>(\frac xa)^2 + (\frac yb)^2 = 1</w:t></w:r></w:customXml><w:r><w:t>.</w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="code"/></w:pPr><w:r><w:t><![CDATA[figure;
+hold off;
+theta = linspace(0,2*pi,n);
+a = 3;    % semi major axis
+b = 2;    % semi minor axis
+x = a*cos(theta);
+y = b*sin(theta);
+plot(x,y,'b-');
+hold on;
+% Compute the eccentricity for plotting foci
+e = sqrt((1 - b^2/a^2));    % eccentricity
+plot(a*e,0,'k*', -a*e,0,'k*')
+title('Ellipse with major and minor axes along the Cartesian axes');]]></w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="text"/><w:jc w:val="left"/></w:pPr><w:r><w:t>Copyright MathWorks 2017</w:t></w:r></w:p></w:body></w:document>
