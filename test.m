@@ -3,7 +3,7 @@ function test()
 end
 % let's see if 
 
-% Run the code section below to plot an image of a rose
+% Run the code section below to plot an image of a rose in jet
 for i = 1:12
     disp('Starting up')
 end
