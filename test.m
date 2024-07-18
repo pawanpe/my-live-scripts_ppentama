@@ -2,8 +2,12 @@ function test()
     plot(1:10,1:10, 'r');
 end
 % let's see if 
-% This code will plot an image of a rose
-n=900;
+
+% Run the code section below to plot an image of a rose in jet
+for i = 1:12
+    disp('Starting up')
+end
+n=800;
 p=pi;
 [R,T]=ndgrid(linspace(0,1,n),linspace(-2,20*p,n));
 x=1-(.5)*((5/4)*(1-mod(3.6*T,2*p)/p).^2-.25).^2;
@@ -18,7 +22,7 @@ Z=x.*(R.*H-y.*L);
 surf(X,Y,Z,'LineStyle','none')
 grid,axis off;
 colormap(jet)
-% You should now see the plot
+% You should see the plot
 for i = 1:12
     disp('Shutting down')
 end
