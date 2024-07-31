@@ -1,7 +1,6 @@
 function test()
     plot(1:10,1:10, 'r');
 end
-% let's see if 
 
 % Run the code section below to plot an image of a rose in jet
 for i = 1:12
