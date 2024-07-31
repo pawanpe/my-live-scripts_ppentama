@@ -3,7 +3,7 @@ function test()
 end
 
 % Run the code section below to plot an image of a rose in jet
-for i = 1:12
+for i = 1:5
     disp('Starting up')
 end
 n=800;
