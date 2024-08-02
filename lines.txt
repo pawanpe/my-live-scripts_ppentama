@@ -2,4 +2,5 @@ line 1
 line 2
 line 3
 something to test on line 4
+someting for line 5. When is Ring0 out?
 docsearch 'text file?' 

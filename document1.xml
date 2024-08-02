@@ -32,4 +32,4 @@ hold on;
 % Compute the eccentricity for plotting foci
 e = sqrt((1 - b^2/a^2));    % eccentricity
 plot(a*e,0,'k*', -a*e,0,'k*')
-title('Ellipse with major and minor axes along the Cartesian axes');]]></w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="text"/><w:jc w:val="left"/></w:pPr><w:r><w:t>Copyright MathWorks 2017</w:t></w:r></w:p></w:body></w:document>
+title('Ellipse with major and minor axes along the Cartesian axes');]]<a href="www.mathworks.com">MathWorks</a>></w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="text"/><w:jc w:val="left"/></w:pPr><w:r><w:t>Copyright MathWorks 2017</w:t></w:r></w:p></w:body></w:document>
